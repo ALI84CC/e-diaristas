@@ -186,10 +186,11 @@ header{
 .porq-item i{
     font-size: 40px;
 }
-/* section faqs */
-.faqs{
-   padding-bottom: 50opx; 
+
+.porq-campos-item hr{
+    display: none;
 }
+/* section faqs */
 
 .division-wave{
     width: 100%;
@@ -202,6 +203,9 @@ header{
     top:-50px;
 }
 
+.faqs{
+   padding-bottom: 50opx; 
+} 
 
 .title-session-faqs{
     text-align: center;
@@ -325,4 +329,91 @@ footer{
 .social-media :hover{
     transform: scale(1.07);
     transition: .4s;
+}
+
+/* breakpoints */
+
+@media(max-width: 1200px) {
+    
+}
+@media(max-width: 992px) {
+    .principal{
+        background-size: 100% 100%;
+        background-position: bottom;
+        padding: 80px;
+    }
+    .principal-image{
+        display: none;
+    }
+    .principal-section{
+        justify-content: center;
+    }
+    .principal-description{
+
+        text-align: center;
+    }
+    .porq{
+        margin-top:0 ;
+    }
+    .footer-content{
+        grid-template-columns: 1fr 1fr;
+        row-gap: 30px;
+        column-gap: 0;
+    }
+}
+@media(max-width: 768px) {
+    .nav-menu{
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+    }
+    .principal-section, .principal-description{
+        width: 100%;
+        display: block
+    }
+    .principal-description{
+        gap: 0;
+        max-width: 100;
+    }
+    .principal-diarista-text, .principal-discription p{
+        border: none;
+        padding: 0;
+        font-weight: normal;
+        font-size: 1.2rem;
+        margin:0;
+    }
+    .principal-diarista-text::after{
+        display: none;
+    }
+    .principal-diarista-text span{
+        color: var(--dark-grey);
+    }
+    .principal-discription a{
+        display: block;
+        width: 80%;
+        padding: 15px;
+        margin: 30px auto 10px auto;
+    }
+}
+@media(max-width: 600px) {
+    .porq-campos-item{
+        gap: 15px;
+    }
+    .porq-campos-item hr{
+        width: 100%;
+        display: block;
+    }
+
+    .footer-content{
+        grid-template-columns: 1fr;
+    }
+
+    .porq-item{
+        font-size: 15px;
+    }
+
+    .btn-header{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
 }
